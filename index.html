@@ -4,10 +4,12 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Yaz Khoury Resume</title>
-
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!--Normalize-->
 	<link rel="stylesheet" href="css/normalize.css">
 	<!--Foundation-->
@@ -15,10 +17,12 @@
 	<!--Stylesheet-->
 	<link rel="stylesheet" href="css/app.css">
 	<!--Google Fonts-->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Lato:300,100' rel='stylesheet' type='text/css'>
-	<!--Font Awesome-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato:300,100" rel="stylesheet">
+
 	<!--Modernizr-->
 	<script src="js/modernizr.js"></script>
+
+
 </head>
 
 <body>
@@ -26,10 +30,9 @@
 		<header class="header">
 			<div id="row1" class="row">
 				<div class="small-5 column">
-					<h1 id="yoogle-header"><span class="blue">Y</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span><span class="black">+</span></h1>
+					<h1 id="yoogle-header"><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span><span class="black">+</span></h1>
 				</div>
-				<div class="small-7 column">
-					<h2 id="header-name">Yaz Khoury</h2>
+				<div class="small-7 column" id="name-display">
 				</div>
 			</div>
 		</header>
@@ -59,12 +62,9 @@
 			</section>
 		</nav>
 		<div class="row" id="orbit-orange">
-			<div class="small-5 column">
-				<img src="img/yaz_avatar.jpg" class="responsive-img" id="avatar-pic">
+			<div class="small-5 medium-4 large-4 column" id="my-picture">
 			</div>
-			<div class="small-7 column" id="main-tagline">
-				<h2>Web Developer</h2>
-				<h3>Front-End Ninja</h3>
+			<div class="small-7 medium-8 large-8 column" id="main-tagline">
 			</div>
 		</div>
 	</section>
@@ -74,21 +74,21 @@
 			<div class="row">
 				<div class="small-12 medium-6 column">
 					<div class="blue-panel">
-						<div class="panel-body">
+						<div class="panel-body" id="work-panel">
 							<h3>Professional Experience</h3><hr>
-							<h4><i>Varcity		- 	Engineer</i></h4>
-							<h4>2014 - Montreal</h4>
-							<p class="work-description">Lorem iPSUM</p>
+							<!-- <h4><i>Varcity		- 	Engineer</i></h4> -->
+							<!-- <h4>2014 - Montreal</h4> -->
+							<!-- <p class="work-description">Lorem iPSUM</p><hr> -->
 						</div>
 					</div>
 				</div>
 				<div class="small-12 medium-6 column">
 					<div class="red-panel">
-						<div class="panel-body">
+						<div class="panel-body" id="study-panel">
 							<h3>Education</h3><hr>
-							<h4><i>Varcity		- 	Engineer</i></h4>
-							<h4>2014 - Montreal</h4>
-							<p class="work-description">Lorem iPSUM</p>
+						</div>
+						<div class="panel-body" id="online-study-panel">
+							<h3>Online Education</h3><hr>
 						</div>
 					</div>
 				</div>
@@ -135,9 +135,9 @@
 					<div class="red-panel">
 						<div class="panel-body">
 							<!--TO DO: Fix mapDiv-->
-							<!-- <div id="mapDiv"> -->
+							<div id="mapDiv">
 								<h3>Where I've Lived and Worked</h3>
-							<!-- </div> -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -182,11 +182,11 @@
 	</div>-->
 
 	<!--Javascript-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-	<!--TO DO: Fix JS files for new template-->
-	<!--<script src="js/helper.js"></script>
-	<script src="js/resumeBuilder.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/helper.js"></script>
+
+	<script src="js/resumeBuilder.js"></script>
 
 	<script src="js/foundation.min.js"></script>
 	<script>
@@ -194,8 +194,9 @@
 	</script>
 
 	<!--TO DO: Adjust code for new template-->
-	<!--
+
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+	<!--
 	<script type="text/javascript">
 		if(document.getElementsByClassName('flex-item').length === 0) {
 		  document.getElementById('topContacts').style.display = 'none';

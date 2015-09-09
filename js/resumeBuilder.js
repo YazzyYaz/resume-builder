@@ -73,8 +73,10 @@ var projects = {
 }
 
 var bio = {
+	"logo": "Y",
 	"name": "Yaz Khoury",
 	"role": "Web Developer",
+	"subrole": "Front-End Ninja",
 	"contact": {
 		"mobile": "917-963-7705",
 		"email": "yaz.khoury@gmail.com",
@@ -82,8 +84,7 @@ var bio = {
 		"twitter": "@Yazanator",
 		"location": "Brooklyn"
 	},
-	"welcomeMessage": "Welcome to My Resume Page!",
-	"picture": "images/fry.jpg",
+	"picture": "img/yaz_avatar.jpg",
 	"skills": [
 		"Version Control",
 		"CSS Preprocessors",
@@ -146,49 +147,79 @@ var education = {
 }
 
 function displayHeader() {
+	var myLogo = HTMLheaderLogo.replace("%data%", bio.logo);
+	$("#yoogle-header").prepend(myLogo);
 	var myName = HTMLheaderName.replace("%data%", bio.name);
-	$("#header").append(myName);
+	$("#name-display").append(myName);
+
 	var myRole = HTMLheaderRole.replace("%data%", bio.role);
-	$("#header").append(myRole);
-	//$("#header").append(HTMLcontactGeneric);
-	var myMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
-	$("#header").append(myMobile);
-	var myEmail = HTMLemail.replace("%data%", bio.contact.email);
-	$("#header").append(myEmail);
-	var myTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
-	$("#header").append(myTwitter);
-	var myGithub = HTMLgithub.replace("%data%", bio.contact.github);
-	$("#header").append(myGithub);
-	var myLocation = HTMLlocation.replace("%data%", bio.contact.location);
-	$("#header").append(myLocation);
+	$("#main-tagline").append(myRole);
+	var mySubRole = HTMLsubRole.replace("%data%", bio.subrole);
+	$("#main-tagline").append(mySubRole);
+
 	var myPic = HTMLbioPic.replace("%data%", bio.picture);
-	$("#header").append(myPic);
-	var myMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-	$("#header").append(myMessage);
-	$("#header").append(HTMLskillsStart);
-	for (skill in bio.skills) {
-		var mySkills = HTMLskills.replace("%data%", bio.skills[skill]);
-		$("#header:last").append(mySkills);
-	}
+	$("#my-picture").append(myPic);
+	// //$("#header").append(HTMLcontactGeneric);
+	// var myMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+	// $("#header").append(myMobile);
+	// var myEmail = HTMLemail.replace("%data%", bio.contact.email);
+	// $("#header").append(myEmail);
+	// var myTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
+	// $("#header").append(myTwitter);
+	// var myGithub = HTMLgithub.replace("%data%", bio.contact.github);
+	// $("#header").append(myGithub);
+	// var myLocation = HTMLlocation.replace("%data%", bio.contact.location);
+	// $("#header").append(myLocation);
+
+	// $("#header").append(HTMLskillsStart);
+	// for (skill in bio.skills) {
+	// 	var mySkills = HTMLskills.replace("%data%", bio.skills[skill]);
+	// 	$("#header:last").append(mySkills);
+	// }
 }
 displayHeader();
 
 function displayWork() {
 	for (job in work.jobs) {
-		$("#workExperience").append(HTMLworkStart);
 		var workEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 		var workTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var workEmployerTitle = workEmployer + workTitle;
-		$(".work-entry:last").append(workEmployerTitle);
+		$("#work-panel:last").append(workEmployerTitle);
 		var workDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		$(".work-entry:last").append(workDate);
 		var workLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		$(".work-entry:last").append(workLocation);
+		var workDateLocation = workDate + workLocation;
+		$("#work-panel:last").append(workDateLocation);
 		var workDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$(".work-entry:last").append(workDescription);
+		$("#work-panel:last").append(workDescription);
 	}
 }
 displayWork();
+
+function displayEdu() {
+	for (study in education.schools) {
+		var schoolName = HTMLschoolName.replace("%data%", education.schools[study].name);
+		var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[study].degree);
+		var schoolNameDegree = schoolName + schoolDegree;
+		$("#study-panel:last").append(schoolNameDegree);
+		var schoolDates = HTMLschoolDates.replace("%data%", education.schools[study].gradYear);
+		var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[study].city);
+		var schoolDatesLocation = schoolDates + schoolLocation;
+		$("#study-panel:last").append(schoolDatesLocation);
+		var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[study].major);
+		$("#study-panel:last").append(schoolMajor);
+	}
+	for (study in education.onlineCourses) {
+		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[study].title);
+		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[study].school);
+		var onlineTitleSchool = onlineTitle + onlineSchool;
+		$("#online-study-panel:last").append(onlineTitleSchool);
+		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[study].dates);
+		$("#online-study-panel:last").append(onlineDates);
+		var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[study].url)
+		$("#online-study-panel:last").append(onlineURL);
+	}
+}
+displayEdu();
 
 $(document).click(function(loc) {
 	var x = loc.pageX;
@@ -209,9 +240,6 @@ function inName(oldName) {
 
 	return finalName;
 }
-
-// $("#main").append(internationalizeButton);
-// inName("Yaz Khoury");
 
 projects.display = function(){
 	for (project in projects.projects) {
