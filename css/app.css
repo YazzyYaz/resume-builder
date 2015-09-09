@@ -1,4 +1,4 @@
-body,
+/*body,
 div,
 ul,
 li,
@@ -128,7 +128,7 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
+/*#header {
   background-color: #484848;
 }
 
@@ -169,28 +169,28 @@ span {
 }
 
 /* Media queries to handle various device widths */
-
+/*
 @media only screen and (max-width: 1024px) {
   #lets-connect {
-    margin-top: 5%;
+	margin-top: 5%;
   }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 175px;
+	width: 175px;
   }
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
-    margin-top: 10%;
+	margin-top: 10%;
   }
   .biopic {
-    width: 150px;
+	width: 150px;
   }
   .welcome-message {
-    display: none;
+	display: none;
   }
 }
 
@@ -209,10 +209,121 @@ span {
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
-    display: block;
+	display: block;
   }
 }
 
 body {
   font-family: "Product-Sans";
+}
+*/
+body {
+	background-color: #e5e5e5;
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+.header {
+	background-color: white;
+}
+
+#yoogle-header {
+  font-family: "Open-Sans", sans-serif;
+}
+
+.blue {
+	color: #4285f4;
+}
+
+.green {
+	color: #34a853;
+}
+
+.red {
+	color: #ea4335;
+}
+
+.yellow {
+	color: #fbbc05;
+}
+
+.black {
+	color: #333333;
+}
+
+#header-name {
+	font-family: "Lato", sans-serif;
+	font-weight: 100;
+}
+
+#orbit-orange {
+	background-color: #f8981c;
+}
+
+.responsive-img {
+	width: 100%;
+	height: auto;
+}
+
+#avatar-pic {
+	max-width: 250px;
+	border-radius: 50%;
+	margin: 1em;
+}
+#main-tagline{
+	padding: 0.5em;
+	font-family: "Lato", sans-serif;
+}
+.blue-panel {
+	margin-bottom: 5px;
+	margin-top: 5px;
+  	background-color: #fff;
+  	border-color: #E0E0E0;
+  	border: 2px;
+  	border-top: 30px solid;
+  	border-top-color: #4285f4;
+}
+.panel-body {
+	padding: 5px;
+}
+.work-description {
+	font-size: 14px;
+}
+.red-panel {
+	margin-bottom: 5px;
+	margin-top: 5px;
+  	background-color: #fff;
+  	border-color: #E0E0E0;
+  	border: 2px;
+  	border-top: 30px solid;
+  	border-top-color: #ea4335;
+}
+.yellow-panel {
+	margin-bottom: 5px;
+	margin-top: 5px;
+  	background-color: #fff;
+  	border-color: #E0E0E0;
+  	border: 2px;
+  	border-top: 30px solid;
+  	border-top-color: #fbbc05;
+}
+.green-panel {
+	margin-bottom: 5px;
+	margin-top: 5px;
+  	background-color: #fff;
+  	border-color: #E0E0E0;
+  	border: 2px;
+  	border-top: 30px solid;
+  	border-top-color: #34a853;
+}
+.footer {
+	background-color: #bcbbbb;
+	margin-top: 10px;
 }

@@ -15,13 +15,148 @@
 	<!--Stylesheet-->
 	<link rel="stylesheet" href="css/app.css">
 	<!--Google Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Lato:300,100' rel='stylesheet' type='text/css'>
 	<!--Font Awesome-->
 	<!--Modernizr-->
 	<script src="js/modernizr.js"></script>
 </head>
 
 <body>
+	<section id="first">
+		<header class="header">
+			<div id="row1" class="row">
+				<div class="small-5 column">
+					<h1 id="yoogle-header"><span class="blue">Y</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span><span class="black">+</span></h1>
+				</div>
+				<div class="small-7 column">
+					<h2 id="header-name">Yaz Khoury</h2>
+				</div>
+			</div>
+		</header>
 
+		<nav class="top-bar" data-topbar role="navigation">
+			<ul class="title-area">
+				<li class="name">
+					<h2><a href="#">My Resume</a></h2>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+
+			<section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<ul class="right">
+					<li class="has-dropdown">
+						<a href="#">Navigate</a>
+						<ul class="dropdown">
+							<li><a href="#">Biography</a></li>
+							<li><a href="#">Work Experience</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</nav>
+		<div class="row" id="orbit-orange">
+			<div class="small-5 column">
+				<img src="img/yaz_avatar.jpg" class="responsive-img" id="avatar-pic">
+			</div>
+			<div class="small-7 column" id="main-tagline">
+				<h2>Web Developer</h2>
+				<h3>Front-End Ninja</h3>
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<section id="information">
+			<div class="row">
+				<div class="small-12 medium-6 column">
+					<div class="blue-panel">
+						<div class="panel-body">
+							<h3>Professional Experience</h3><hr>
+							<h4><i>Varcity		- 	Engineer</i></h4>
+							<h4>2014 - Montreal</h4>
+							<p class="work-description">Lorem iPSUM</p>
+						</div>
+					</div>
+				</div>
+				<div class="small-12 medium-6 column">
+					<div class="red-panel">
+						<div class="panel-body">
+							<h3>Education</h3><hr>
+							<h4><i>Varcity		- 	Engineer</i></h4>
+							<h4>2014 - Montreal</h4>
+							<p class="work-description">Lorem iPSUM</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 medium-12 column">
+					<div class="yellow-panel">
+						<div class="panel-body">
+							<h3>Projects</h3><hr>
+							<h4><i>Varcity		- 	Engineer</i></h4>
+							<h4>2014 - Montreal</h4>
+							<p class="work-description">Lorem iPSUM</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 medium-6 column">
+					<div class="blue-panel">
+						<div class="panel-body">
+							<h3>Biography</h3><hr>
+							<h4><i>Varcity		- 	Engineer</i></h4>
+							<h4>2014 - Montreal</h4>
+							<p class="work-description">Lorem iPSUM</p>
+						</div>
+					</div>
+				</div>
+				<div class="small-12 medium-6 column">
+					<div class="green-panel">
+						<div class="panel-body">
+							<h3>Skills</h3><hr>
+							<h4><i>Varcity		- 	Engineer</i></h4>
+							<h4>2014 - Montreal</h4>
+							<p class="work-description">Lorem iPSUM</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 medium-12 columns">
+					<div class="red-panel">
+						<div class="panel-body">
+							<!--TO DO: Fix mapDiv-->
+							<!-- <div id="mapDiv"> -->
+								<h3>Where I've Lived and Worked</h3>
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<section>
+		<footer class="footer">
+			<div class="row">
+				<div class="small-12">
+					<h4>Let's Connect</h4>
+				</div>
+			</div>
+		</footer>
+	</section>
+
+	<!--TO DO: Adjust tags to helper.js and resumeBuilder.js-->
+	<!--
 	<div id="main">
 		<div id="header" class="center-content clear-fix">
 			<ul id="topContacts" class="flex-box"></ul>
@@ -44,16 +179,22 @@
 			<ul id="footerContacts" class="flex-box">
 			</ul>
 		</div>
-	</div>
+	</div>-->
 
 	<!--Javascript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="js/helper.js"></script>
-	<script src="js/resumeBuilder.js"></script>
+
+	<!--TO DO: Fix JS files for new template-->
+	<!--<script src="js/helper.js"></script>
+	<script src="js/resumeBuilder.js"></script>-->
+
 	<script src="js/foundation.min.js"></script>
 	<script>
 		$(document).foundation();
 	</script>
+
+	<!--TO DO: Adjust code for new template-->
+	<!--
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<script type="text/javascript">
 		if(document.getElementsByClassName('flex-item').length === 0) {
@@ -77,6 +218,6 @@
 		if(document.getElementById('map') === null) {
 		  document.getElementById('mapDiv').style.display = 'none'
 		}
-	</script>
+	</script>-->
 </body>
 </html>
