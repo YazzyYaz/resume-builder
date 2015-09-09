@@ -1,0 +1,235 @@
+var work = {
+	"jobs": [
+		{
+			"employer": "Asmbld",
+			"title": "Electrical Enginner",
+			"location": "Brooklyn, New York, USA",
+			"dates": "June 2015 to Present",
+			"description": "Asmbld is an architectural robotics startup company that is building reconfigurable spaces for real estate. It also is developing a Martian robot that builds a habitat made out of ice."
+		},
+		{
+			"employer": "Feel Three",
+			"title": "Electrical Enginner",
+			"location": "Montreal, QC, Canada",
+			"dates": "March 2015 to May 2015",
+			"description": "Feel Three is developing a virtual reality motion simulator for Oculus Rift and Gear VR headsets that is affordable to the consumer."
+		},
+		{
+			"employer": "Terasofya",
+			"title": "Cofounder and Project Lead",
+			"location": "Montreal, QC, Canada",
+			"dates": "August 2014 to February 2015",
+			"description": "Terasofya is a Natural Language Processing startup that has developed an Artificial Intelligence engine that analyzes news reports for summarization and sentimental analysis."
+		},
+		{
+			"employer": "La MARQ 515",
+			"title": "Leasing Agent",
+			"location": "Montreal, QC, Canada",
+			"dates": "April 2014 to February 2015",
+			"description": "La MARQ 515 is a private student residential housing catering to the international community in Montreal from all four major universities in the area, offering luxurious fully furnished apartments and top class amenities."
+		}
+	]
+}
+
+var projects = {
+	"projects": [
+		{
+			"title": "Portfolio Website",
+			"dates": "September 2015",
+			"description": "A website designed with a portfolio of projects and an about me page.",
+			"images": ""
+		},
+		{
+			"title": "Ice House - NASA's 3-D Printed Habitat Challenge",
+			"dates": "August 2015 - September 2015",
+			"description": "A Martian robot that can 3-D Print a habitat made out of Ice",
+			"images": ""
+		},
+		{
+			"title": "DOM Reconfigurable Space Robot",
+			"dates": "June 2015 - August 2015",
+			"description": "A real-estate robot that can reconfigure an empty space by assembling furnitures and wall underground and lifting it up as the user specifies.",
+			"images": ""
+		},
+		{
+			"title": "Summarit",
+			"dates": "August 2014 - February 2015",
+			"description": "A website where the user can sign up for the summarized news content that includes sentimental analysis about the news report he is receiving.",
+			"images": ""
+		},
+		{
+			"title": "Gump - A Voice Activated Bipedal Robot",
+			"dates": "August 2013 - April 2014",
+			"description": "An award-winning two-legged robot that walks in any direction according to the voice command given by the user.",
+			"images": ""
+		},
+		{
+			"title": "SIMurai - A SumoRobot",
+			"dates": "January 2013 - April 2013",
+			"description": "A SumoRobot designed for the SumoRobot competition whose main objective is to kick out his opponent from the ring while remaining inside.",
+			"images": ""
+		}
+	]
+}
+
+var bio = {
+	"name": "Yaz Khoury",
+	"role": "Web Developer",
+	"contact": {
+		"mobile": "917-963-7705",
+		"email": "yaz.khoury@gmail.com",
+		"github": "YazzyYaz",
+		"twitter": "@Yazanator",
+		"location": "Brooklyn"
+	},
+	"welcomeMessage": "Welcome to My Resume Page!",
+	"picture": "images/fry.jpg",
+	"skills": [
+		"Version Control",
+		"CSS Preprocessors",
+		"Site Building",
+		"Responsive Design"
+	]
+}
+
+var education = {
+	"schools": [
+		{
+			"name": "Concordia University",
+			"city": "Montreal, QC, Canada",
+			"degree": "Bachelor of Engineering",
+			"major": "Electrical Engineering",
+			"gradYear": "2014",
+			"url": "www.concordia.ca"
+		},
+		{
+			"name": "ISG-Dammam",
+			"city": "Dammam, Saudi Arabia",
+			"degree": "American High School Diploma",
+			"major": null,
+			"gradYear": "2008",
+			"url": "http://dammam.isg.edu.sa/"
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "Javascript Basics",
+			"school": "Udacity",
+			"dates": "September 2015",
+			"url": "https://www.udacity.com/course/javascript-basics--ud804"
+		},
+		{
+			"title": "Intro to HTML And CSS",
+			"school": "Udacity",
+			"dates": "August 2015",
+			"url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
+		},
+		{
+			"title": "How to Use Git and GitHub",
+			"school": "Udacity",
+			"dates": "August 2015",
+			"url": "https://www.udacity.com/course/how-to-use-git-and-github--ud775"
+		},
+		{
+			"title": "Responsive Web Design Fundamentals",
+			"school": "Udacity",
+			"dates": "August 2015",
+			"url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+		},
+		{
+			"title": "Responsive Images",
+			"school": "Udacity",
+			"dates": "August 2015",
+			"url": "https://www.udacity.com/course/responsive-images--ud882"
+		}
+	]
+}
+
+function displayHeader() {
+	var myName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").append(myName);
+	var myRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#header").append(myRole);
+	//$("#header").append(HTMLcontactGeneric);
+	var myMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+	$("#header").append(myMobile);
+	var myEmail = HTMLemail.replace("%data%", bio.contact.email);
+	$("#header").append(myEmail);
+	var myTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
+	$("#header").append(myTwitter);
+	var myGithub = HTMLgithub.replace("%data%", bio.contact.github);
+	$("#header").append(myGithub);
+	var myLocation = HTMLlocation.replace("%data%", bio.contact.location);
+	$("#header").append(myLocation);
+	var myPic = HTMLbioPic.replace("%data%", bio.picture);
+	$("#header").append(myPic);
+	var myMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(myMessage);
+	$("#header").append(HTMLskillsStart);
+	for (skill in bio.skills) {
+		var mySkills = HTMLskills.replace("%data%", bio.skills[skill]);
+		$("#header:last").append(mySkills);
+	}
+}
+displayHeader();
+
+function displayWork() {
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
+		var workEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var workTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var workEmployerTitle = workEmployer + workTitle;
+		$(".work-entry:last").append(workEmployerTitle);
+		var workDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(workDate);
+		var workLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		$(".work-entry:last").append(workLocation);
+		var workDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(workDescription);
+	}
+}
+displayWork();
+
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
+	logClicks(x,y);
+});
+
+function inName(oldName) {
+	var finalName = oldName;
+	// Split finalName into two arrays, removing the space between them, under the variable name_array
+	var name_array = finalName.split(" ");
+	// Manipulate first name to have first index as UpperCase and remainder as LowerCase
+	name_array[0] = name_array[0].charAt(0).toUpperCase() + name_array[0].slice(1).toLowerCase();
+	// Manipulate last name to have all letters as UpperCase
+	name_array[1] = name_array[1].toUpperCase();
+	// Join name_array with space to have a string with first name and last name
+	finalName = name_array.join(" ");
+
+	return finalName;
+}
+
+// $("#main").append(internationalizeButton);
+// inName("Yaz Khoury");
+
+projects.display = function(){
+	for (project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+		var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(projectTitle);
+		var projectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(projectDates);
+		var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(projectDescription);
+		if (projects.projects[project].images.length > 0) {
+			for (image in projects.projects[project].images) {
+				var projectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				$(".project-entry:last").append(projectImage);
+			}
+		}
+	}
+}
+projects.display();
+
+$("#mapDiv").append(googleMap);
