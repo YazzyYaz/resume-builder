@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<title>Resume</title>
-	<link href="css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<title>Yaz Khoury Resume</title>
 
-	<meta name="viewport" content="width=device-width">
+	<!--Normalize-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!--Foundation-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="css/app.css">
+	<!--Google Fonts-->
+	<!--Font Awesome-->
+	<!--Modernizr-->
+	<script src="js/modernizr.js"></script>
 </head>
 
 <body>
@@ -35,22 +45,17 @@
 			</ul>
 		</div>
 	</div>
+
 	<!--Javascript-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/helper.js"></script>
 	<script src="js/resumeBuilder.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<script type="text/javascript">
-		// Notice how all of a sudden there's JavaScript inside this HTML
-		// document? You can write JavaScript between <script> tags. At the end of your
-		// JavaScript, don't forget the closing script tag with the slash (/).
-		// Also, this is a JavaScript style comment. You can comment in JavaScript with:
-		//   two slashes for all following characters on a single line, or
-		/*
-			an opening and closing set of slash asterisks for block comments.
-		*/
-
-
 		if(document.getElementsByClassName('flex-item').length === 0) {
 		  document.getElementById('topContacts').style.display = 'none';
 		}
