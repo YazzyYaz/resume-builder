@@ -21,6 +21,7 @@
 
 	<!--Modernizr-->
 	<script src="js/modernizr.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
 
 </head>
@@ -119,7 +120,7 @@
 						<div class="panel-body">
 							<h3>Skills</h3><hr>
 							<div class="row">
-								<div class="small-8 small-offset-2 medium-8 medium-offset-2 large-8 large-offset-2 columns" id="skill-set">
+								<div class="small-9 small-offset-1 medium-8 medium-offset-1 large-8 large-offset-2 columns" id="skill-set">
 								<script src="http://d3js.org/d3.v3.min.js"></script>
 								<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 								<script src="js/draw.js"></script>
@@ -130,12 +131,15 @@
 			</div>
 
 			<div class="row">
-				<div class="small-12 medium-12 columns">
+				<div class="small-10 small-offset-1 medium-10 medium-offset-1 large-12 large-offset-0 columns">
 					<div class="red-panel">
 						<div class="panel-body">
 							<!--TO DO: Fix mapDiv-->
-							<div id="mapDiv">
-								<h3>Where I've Lived and Worked</h3>
+							<h3>Where I've Lived and Worked</h3>
+							<div class="row">
+							<div class="small-10 small-offset-1 medium-10 medium-offset-1 large-12 large-offset-0 columns">
+							<div id="mapDiv"></div>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -190,7 +194,9 @@
 
 	<!--Javascript-->
 
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<script src="js/helper.js"></script>
 
 	<script src="js/resumeBuilder.js"></script>
@@ -199,11 +205,6 @@
 	<script>
 		$(document).foundation();
 	</script>
-
-	<!--TO DO: Adjust code for new template-->
-
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
 
 	<!--<script type="text/javascript">
 		if(document.getElementsByClassName('flex-item').length === 0) {

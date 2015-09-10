@@ -172,3 +172,13 @@ p {
   top: 100%;
   left: 0;
 }
+
+#map {
+  display: block;
+  height: 100%;
+}
+
+#mapDiv {
+  height: 300px;
+  width: 100%;
+}

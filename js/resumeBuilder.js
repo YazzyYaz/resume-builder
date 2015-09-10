@@ -1,3 +1,4 @@
+// Work JSON Data
 var work = {
 	"jobs": [
 		{
@@ -46,6 +47,7 @@ var work = {
 }
 work.display();
 
+// Projects JSON Data
 var projects = {
 	"projects": [
 		{
@@ -104,25 +106,20 @@ var projects = {
 }
 projects.display();
 
+// Biography JSON Data
 var bio = {
 	"logo": "Y",
 	"name": "Yaz Khoury",
 	"role": "Web Developer",
 	"subrole": "Front-End Ninja",
 	"contact": {
-		"mobile": "917-963-7705",
+		"mobile": "123-456-7890",
 		"email": "yaz.khoury@gmail.com",
 		"github": "YazzyYaz",
 		"twitter": "@Yazanator",
 		"location": "Brooklyn"
 	},
 	"picture": "img/yaz_avatar.jpg",
-	"skills": [
-		"Version Control",
-		"CSS Preprocessors",
-		"Site Building",
-		"Responsive Design"
-	],
 	display: function() {
 		var myLogo = HTMLheaderLogo.replace("%data%", bio.logo);
 		$("#yoogle-header").prepend(myLogo);
@@ -153,6 +150,7 @@ var bio = {
 }
 bio.display();
 
+// Education JSON Data
 var education = {
 	"schools": [
 		{
@@ -231,7 +229,6 @@ var education = {
 }
 education.display();
 
-
 $(document).click(function(loc) {
 	var x = loc.pageX;
 	var y = loc.pageY;
@@ -250,5 +247,4 @@ function inName(oldName) {
 	finalName = name_array.join(" ");
 	return finalName;
 }
-
 $("#mapDiv").append(googleMap);

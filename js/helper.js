@@ -26,10 +26,6 @@ var HTMLlocation = '<span class="fa fa-map-marker fa-2x"></span><p>%data%</p>';
 
 var HTMLbioPic = '<img src="%data%" class="responsive-img" id="avatar-pic">';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-
-
 var HTMLworkEmployer = '<h4><i>%data% ';
 var HTMLworkTitle = ' - %data%</i></h4>';
 var HTMLworkDates = '<h4 class="work-date">%data% - ';
