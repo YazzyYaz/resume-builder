@@ -28,7 +28,7 @@ p {
 }
 
 #yoogle-header {
-	font-family: "Open-Sans", sans-serif;
+	font-family: 'Open-Sans', sans-serif;
 }
 
 .blue {
@@ -48,11 +48,11 @@ p {
 }
 
 .black {
-	color: #333333;
+	color: #333;
 }
 
 #header-name {
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 100;
 }
 
@@ -79,7 +79,7 @@ p {
 
 #main-tagline{
 	padding: 0.5em;
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 
@@ -92,7 +92,7 @@ p {
 	margin-bottom: 5px;
 	margin-top: 5px;
 	background-color: #fff;
-	border-color: #E0E0E0;
+	border-color: #e0e0e0;
 	border: 2px;
 	border-top: 30px solid;
 	border-top-color: #4285f4;
@@ -120,7 +120,7 @@ p {
 	margin-bottom: 5px;
 	margin-top: 5px;
 	background-color: #fff;
-	border-color: #E0E0E0;
+	border-color: #e0e0e0;
 	border: 2px;
 	border-top: 30px solid;
 	border-top-color: #fbbc05;
@@ -130,7 +130,7 @@ p {
 	margin-bottom: 5px;
 	margin-top: 5px;
 	background-color: #fff;
-	border-color: #E0E0E0;
+	border-color: #e0e0e0;
 	border: 2px;
 	border-top: 30px solid;
 	border-top-color: #34a853;
@@ -190,7 +190,7 @@ p {
 	width: 50%;
 	line-height: 1;
 	color: rgba(0, 0, 0, 0.8);
-	content: "\25BC";
+	content: '\25BC';
 	position: relative;
 	text-align: center;
 }
