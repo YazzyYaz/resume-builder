@@ -18,14 +18,11 @@ var HTMLheaderName = '<h2 id="header-name">%data%</h2>';
 var HTMLheaderRole = '<h2>%data%</h2>';
 var HTMLsubRole = '<h3>%data%</h3>';
 
-// To Fix once Icons are Figured Out
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<span class="fa fa-mobile fa-2x"></span><p>%data%</p>';
+var HTMLemail = '<span class="fa fa-envelope fa-2x"></span><p>%data%</p>';
+var HTMLtwitter = '<span class="fa fa-twitter fa-2x"></span><p>%data%</p>';
+var HTMLgithub = '<span class="fa fa-github fa-2x"></span><p>%data%</p>';
+var HTMLlocation = '<span class="fa fa-map-marker fa-2x"></span><p>%data%</p>';
 
 var HTMLbioPic = '<img src="%data%" class="responsive-img" id="avatar-pic">';
 
@@ -39,13 +36,13 @@ var HTMLworkDates = '<h4 class="work-date">%data% - ';
 var HTMLworkLocation = '%data%</h4><br>';
 var HTMLworkDescription = '<p class="work-description">%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+
+var HTMLprojectTitle = '<h4><i>%data% - ';
+var HTMLprojectDates = ' %data%</i></h4>';
+var HTMLprojectDescription = '<p class="work-description">%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
+
 var HTMLschoolName = '<h4><i>%data% ';
 var HTMLschoolDegree = ' - %data%</i></h4>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
