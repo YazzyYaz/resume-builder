@@ -5,6 +5,9 @@ version of Google Plus. It has already been filled by me with data placeholders,
 is up to you the user to switch my placeholder data with yours. Instructions on how
 to do so will follow.
 
+The following is a preview of the design you'll come to see.
+![alt yoogler preview](img/yoogler_preview.jpg)
+
 >	If you would like to see the original repository for a Resume generator, check out Udacity's repo
 >	on this [link](https://github.com/udacity/frontend-nanodegree-resume).
 
@@ -26,6 +29,11 @@ to do so will follow.
 10. aster_data.csv: CSV file to add your skills and score which works with draw.js.
 11. img: Add your custom images here, but be sure to link them in the resumeBuilder.js file.
 
+In order to see the D3 Skills Visualization, you need to initiate a small server in the Terminal with
+Python in the main resume directory:
+'''shell
+python -m SimpleHTTPServer
+'''
 
 I'll be continuously updating the design of this repository whenever I can. If you like to contribute or have
 any questions, email me at: yaz.khoury@gmail.com
