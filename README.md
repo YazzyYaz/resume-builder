@@ -29,11 +29,11 @@ The following is a preview of the design you'll come to see.
 10. aster_data.csv: CSV file to add your skills and score which works with draw.js.
 11. img: Add your custom images here, but be sure to link them in the resumeBuilder.js file.
 
-In order to see the D3 Skills Visualization, you need to initiate a small server in the Terminal with
-Python in the main resume directory:
-'''shell
+In order to see the D3 Skills Visualization, you need to initiate a small server in the Terminal with Python in the main resume directory:
+
+```Shell
 python -m SimpleHTTPServer
-'''
+```
 
 I'll be continuously updating the design of this repository whenever I can. If you like to contribute or have
 any questions, email me at: yaz.khoury@gmail.com
