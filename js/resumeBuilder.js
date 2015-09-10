@@ -54,37 +54,37 @@ var projects = {
 			"title": "Portfolio Website",
 			"dates": "September 2015",
 			"description": "A website designed with a portfolio of projects and an about me page.",
-			"images": ""
+			"images": "img/portfol.jpg"
 		},
 		{
 			"title": "Ice House - NASA's 3-D Printed Habitat Challenge",
 			"dates": "August 2015 - September 2015",
 			"description": "A Martian robot that can 3-D Print a habitat made out of Ice",
-			"images": ""
+			"images": "img/nasa3d.jpg"
 		},
 		{
 			"title": "DOM Reconfigurable Space Robot",
 			"dates": "June 2015 - August 2015",
 			"description": "A real-estate robot that can reconfigure an empty space by assembling furnitures and wall underground and lifting it up as the user specifies.",
-			"images": ""
+			"images": "img/dombot.jpg"
 		},
 		{
 			"title": "Summarit",
 			"dates": "August 2014 - February 2015",
 			"description": "A website where the user can sign up for the summarized news content that includes sentimental analysis about the news report he is receiving.",
-			"images": ""
+			"images": "img/summ.jpg"
 		},
 		{
 			"title": "Gump - A Voice Activated Bipedal Robot",
 			"dates": "August 2013 - April 2014",
 			"description": "An award-winning two-legged robot that walks in any direction according to the voice command given by the user.",
-			"images": ""
+			"images": "img/gump.jpg"
 		},
 		{
 			"title": "SIMurai - A SumoRobot",
 			"dates": "January 2013 - April 2013",
 			"description": "A SumoRobot designed for the SumoRobot competition whose main objective is to kick out his opponent from the ring while remaining inside.",
-			"images": ""
+			"images": "img/simurai.jpg"
 		}
 	],
 	display: function() {
@@ -95,12 +95,8 @@ var projects = {
 			$("#project-panel:last").append(projectDates);
 			var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 			$("#project-panel:last").append(projectDescription);
-			if (projects.projects[project].images.length > 0) {
-				for (image in projects.projects[project].images) {
-					var projectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-					$("#project-panel:last").append(projectImage);
-				}
-			}
+			var projectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+			$("#project-panel:last").append(projectImage);
 		}
 	}
 }
@@ -232,22 +228,5 @@ var education = {
 }
 education.display();
 
-$(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
-	logClicks(x,y);
-});
 
-function inName(oldName) {
-	var finalName = oldName;
-	// Split finalName into two arrays, removing the space between them, under the variable name_array
-	var name_array = finalName.split(" ");
-	// Manipulate first name to have first index as UpperCase and remainder as LowerCase
-	name_array[0] = name_array[0].charAt(0).toUpperCase() + name_array[0].slice(1).toLowerCase();
-	// Manipulate last name to have all letters as UpperCase
-	name_array[1] = name_array[1].toUpperCase();
-	// Join name_array with space to have a string with first name and last name
-	finalName = name_array.join(" ");
-	return finalName;
-}
 $("#mapDiv").append(googleMap);

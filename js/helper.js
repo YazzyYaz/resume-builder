@@ -35,7 +35,7 @@ var HTMLworkDescription = '<p class="work-description">%data%</p>';
 var HTMLprojectTitle = '<h4><i>%data% - ';
 var HTMLprojectDates = ' %data%</i></h4>';
 var HTMLprojectDescription = '<p class="work-description">%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img class="responsive-img" src="%data%">';
 
 // School Info
 var HTMLschoolName = '<h4><i>%data% ';
