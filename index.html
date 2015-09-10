@@ -21,7 +21,6 @@
 
 	<!--Modernizr-->
 	<script src="js/modernizr.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
 
 </head>
@@ -52,11 +51,12 @@
 					<li class="has-dropdown">
 						<a href="#">Navigate</a>
 						<ul class="dropdown">
-							<li><a href="#">Biography</a></li>
-							<li><a href="#">Work Experience</a></li>
-							<li><a href="#">Projects</a></li>
-							<li><a href="#">Education</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#bio-panel">Biography</a></li>
+							<li><a href="#work-panel">Work Experience</a></li>
+							<li><a href="#project-panel">Projects</a></li>
+							<li><a href="#study-panel">Education</a></li>
+							<li><a href="#footer-bar">Contact</a></li>
+							<li><a href="#skill-set">Skills</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -107,11 +107,8 @@
 			<div class="row">
 				<div class="small-12 medium-6 columns">
 					<div class="blue-panel">
-						<div class="panel-body">
+						<div class="panel-body" id="bio-panel">
 							<h3>Biography</h3><hr>
-							<h4><i>Varcity		- 	Engineer</i></h4>
-							<h4>2014 - Montreal</h4>
-							<p class="work-description">Lorem iPSUM</p>
 						</div>
 					</div>
 				</div>
@@ -121,9 +118,9 @@
 							<h3>Skills</h3><hr>
 							<div class="row">
 								<div class="small-9 small-offset-1 medium-8 medium-offset-1 large-8 large-offset-2 columns" id="skill-set">
-								<script src="http://d3js.org/d3.v3.min.js"></script>
-								<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-								<script src="js/draw.js"></script>
+									<script src="http://d3js.org/d3.v3.min.js"></script>
+									<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+									<script src="js/draw.js"></script>
 							</div>
 						</div>
 					</div>
@@ -134,7 +131,6 @@
 				<div class="small-10 small-offset-1 medium-10 medium-offset-1 large-12 large-offset-0 columns">
 					<div class="red-panel">
 						<div class="panel-body">
-							<!--TO DO: Fix mapDiv-->
 							<h3>Where I've Lived and Worked</h3>
 							<div class="row">
 							<div class="small-10 small-offset-1 medium-10 medium-offset-1 large-12 large-offset-0 columns">
@@ -149,7 +145,7 @@
 	</main>
 
 	<section>
-		<footer class="footer">
+		<footer class="footer" id="footer-bar">
 			<div class="row">
 				<div class="small-8 small-offset-2 medium-8 medium-offset-4 columns">
 					<h2>Let's Connect</h2>
@@ -166,35 +162,7 @@
 		</footer>
 	</section>
 
-	<!--TO DO: Adjust tags to helper.js and resumeBuilder.js-->
-	<!--
-	<div id="main">
-		<div id="header" class="center-content clear-fix">
-			<ul id="topContacts" class="flex-box"></ul>
-		</div>
-		<div style="clear: both;"></div>
-		<div id="workExperience" class="gray">
-			<h2>Work Experience</h2>
-		</div>
-		<div id="projects">
-			<h2>Projects</h2>
-		</div>
-		<div id="education" class="gray">
-			<h2>Education</h2>
-		</div>
-		<div id="mapDiv">
-			<h2>Where I've Lived and Worked</h2>
-		</div>
-		<div id="lets-connect" class="dark-gray">
-			<h2 class="orange center-text">Let's Connect</h2>
-			<ul id="footerContacts" class="flex-box">
-			</ul>
-		</div>
-	</div>-->
-
 	<!--Javascript-->
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<script src="js/helper.js"></script>
@@ -205,29 +173,5 @@
 	<script>
 		$(document).foundation();
 	</script>
-
-	<!--<script type="text/javascript">
-		if(document.getElementsByClassName('flex-item').length === 0) {
-		  document.getElementById('topContacts').style.display = 'none';
-		}
-		if(document.getElementsByTagName('h1').length === 0) {
-		  document.getElementById('header').style.display = 'none'
-		}
-		if(document.getElementsByClassName('work-entry').length === 0) {
-		  document.getElementById('workExperience').style.display = 'none'
-		}
-		if(document.getElementsByClassName('project-entry').length === 0) {
-		  document.getElementById('projects').style.display = 'none'
-		}
-		if(document.getElementsByClassName('education-entry').length === 0) {
-		  document.getElementById('education').style.display = 'none';
-		}
-		if(document.getElementsByClassName('flex-item').length === 0) {
-		  document.getElementById('lets-connect').style.display = 'none'
-		}
-		if(document.getElementById('map') === null) {
-		  document.getElementById('mapDiv').style.display = 'none'
-		}
-	</script>-->
 </body>
 </html>
