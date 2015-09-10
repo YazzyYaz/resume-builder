@@ -128,27 +128,27 @@ var bio = {
 		$("#yoogle-header").prepend(myLogo);
 		var myName = HTMLheaderName.replace("%data%", bio.name);
 		$("#name-display").append(myName);
-		var myRole = HTMLheaderRole.replace("%data%", bio.role);
-		$("#main-tagline").prepend(myRole);
 		var mySubRole = HTMLsubRole.replace("%data%", bio.subrole);
 		$("#main-tagline").prepend(mySubRole);
+		var myRole = HTMLheaderRole.replace("%data%", bio.role);
+		$("#main-tagline").prepend(myRole);
 		var myPic = HTMLbioPic.replace("%data%", bio.picture);
 		$("#my-picture").append(myPic);
 		var myMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
 		$("#contact-icons").append(myMobile);
+		$("#phone").append(myMobile);
 		var myEmail = HTMLemail.replace("%data%", bio.contact.email);
 		$("#contact-icons").append(myEmail);
+		$("#email").append(myEmail);
 		var myTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
 		$("#contact-icons").append(myTwitter);
+		$("#twitter").append(myTwitter);
 		var myGithub = HTMLgithub.replace("%data%", bio.contact.github);
 		$("#contact-icons").append(myGithub);
+		$("#github").append(myGithub);
 		var myLocation = HTMLlocation.replace("%data%", bio.contact.location);
 		$("#contact-icons").append(myLocation);
-		// $("#header").append(HTMLskillsStart);
-		// for (skill in bio.skills) {
-		// 	var mySkills = HTMLskills.replace("%data%", bio.skills[skill]);
-		// 	$("#header:last").append(mySkills);
-		// }
+		$("#location").append(myLocation);
 	}
 }
 bio.display();
@@ -231,79 +231,6 @@ var education = {
 }
 education.display();
 
-function displayHeader() {
-	var myLogo = HTMLheaderLogo.replace("%data%", bio.logo);
-	$("#yoogle-header").prepend(myLogo);
-	var myName = HTMLheaderName.replace("%data%", bio.name);
-	$("#name-display").append(myName);
-
-	var myRole = HTMLheaderRole.replace("%data%", bio.role);
-	$("#main-tagline").prepend(myRole);
-	var mySubRole = HTMLsubRole.replace("%data%", bio.subrole);
-	$("#main-tagline").prepend(mySubRole);
-
-	var myPic = HTMLbioPic.replace("%data%", bio.picture);
-	$("#my-picture").append(myPic);
-	var myMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
-	$("#contact-icons").append(myMobile);
-	var myEmail = HTMLemail.replace("%data%", bio.contact.email);
-	$("#contact-icons").append(myEmail);
-	var myTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
-	$("#contact-icons").append(myTwitter);
-	var myGithub = HTMLgithub.replace("%data%", bio.contact.github);
-	$("#contact-icons").append(myGithub);
-	var myLocation = HTMLlocation.replace("%data%", bio.contact.location);
-	$("#contact-icons").append(myLocation);
-
-	// $("#header").append(HTMLskillsStart);
-	// for (skill in bio.skills) {
-	// 	var mySkills = HTMLskills.replace("%data%", bio.skills[skill]);
-	// 	$("#header:last").append(mySkills);
-	// }
-}
-//displayHeader();
-
-function displayWork() {
-	for (job in work.jobs) {
-		var workEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var workTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-		var workEmployerTitle = workEmployer + workTitle;
-		$("#work-panel:last").append(workEmployerTitle);
-		var workDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		var workLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-		var workDateLocation = workDate + workLocation;
-		$("#work-panel:last").append(workDateLocation);
-		var workDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-		$("#work-panel:last").append(workDescription);
-	}
-}
-//displayWork();
-
-function displayEdu() {
-	for (study in education.schools) {
-		var schoolName = HTMLschoolName.replace("%data%", education.schools[study].name);
-		var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[study].degree);
-		var schoolNameDegree = schoolName + schoolDegree;
-		$("#study-panel:last").append(schoolNameDegree);
-		var schoolDates = HTMLschoolDates.replace("%data%", education.schools[study].gradYear);
-		var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[study].city);
-		var schoolDatesLocation = schoolDates + schoolLocation;
-		$("#study-panel:last").append(schoolDatesLocation);
-		var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[study].major);
-		$("#study-panel:last").append(schoolMajor);
-	}
-	for (study in education.onlineCourses) {
-		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[study].title);
-		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[study].school);
-		var onlineTitleSchool = onlineTitle + onlineSchool;
-		$("#online-study-panel:last").append(onlineTitleSchool);
-		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[study].dates);
-		$("#online-study-panel:last").append(onlineDates);
-		var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[study].url)
-		$("#online-study-panel:last").append(onlineURL);
-	}
-}
-//displayEdu();
 
 $(document).click(function(loc) {
 	var x = loc.pageX;
@@ -323,23 +250,5 @@ function inName(oldName) {
 	finalName = name_array.join(" ");
 	return finalName;
 }
-
-projects.display = function(){
-	for (project in projects.projects) {
-		var projectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$("#project-panel:last").append(projectTitle);
-		var projectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$("#project-panel:last").append(projectDates);
-		var projectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$("#project-panel:last").append(projectDescription);
-		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
-				var projectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$("#project-panel:last").append(projectImage);
-			}
-		}
-	}
-}
-//projects.display();
 
 $("#mapDiv").append(googleMap);
