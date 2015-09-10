@@ -112,6 +112,7 @@ var bio = {
 	"name": "Yaz Khoury",
 	"role": "Web Developer",
 	"subrole": "Front-End Ninja",
+	"description": "I'm a Robotic Engineer that is transitioning to a career in Front-End Development. I really love the web and design.",
 	"contact": {
 		"mobile": "123-456-7890",
 		"email": "yaz.khoury@gmail.com",
@@ -146,6 +147,8 @@ var bio = {
 		var myLocation = HTMLlocation.replace("%data%", bio.contact.location);
 		$("#contact-icons").append(myLocation);
 		$("#location").append(myLocation);
+		var myBio = HTMLbio.replace("%data%", bio.description);
+		$("#bio-panel").append(myBio);
 	}
 }
 bio.display();

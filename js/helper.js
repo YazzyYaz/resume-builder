@@ -25,6 +25,7 @@ var HTMLgithub = '<span class="fa fa-github fa-2x"></span><p>%data%</p>';
 var HTMLlocation = '<span class="fa fa-map-marker fa-2x"></span><p>%data%</p>';
 
 var HTMLbioPic = '<img src="%data%" class="responsive-img" id="avatar-pic">';
+var HTMLbio = "<p>%data%</p>"
 
 var HTMLworkEmployer = '<h4><i>%data% ';
 var HTMLworkTitle = ' - %data%</i></h4>';
