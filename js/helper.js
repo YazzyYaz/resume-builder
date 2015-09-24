@@ -139,18 +139,18 @@ function initializeMap() {
 		var locations = [];
 
 		// adds the single location property from bio to the locations array
-		locations.push(bio.contact.location);
+		locations.push(view.bio.contact.location);
 
 		// iterates through school locations and appends each location to
 		// the locations array
-		for (var school in education.schools) {
+		for (var school in view.school) {
 			locations.push(education.schools[school].city);
 		}
 
 		// iterates through work locations and appends each location to
 		// the locations array
-		for (var job in work.jobs) {
-			locations.push(work.jobs[job].location);
+		for (var job in view.job) {
+			locations.push(view.job[job].location);
 		}
 
 		return locations;
